@@ -18,8 +18,6 @@ RUN composer install --no-dev --optimize-autoloader
 
 RUN npm install 
 
-RUN php artisan optimize:clear
-
 EXPOSE 10000
 
 CMD php artisan serve --host=0.0.0.0 --port=$PORT
