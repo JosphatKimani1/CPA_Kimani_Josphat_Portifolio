@@ -13,15 +13,17 @@
             <div class="row align-items-center">
                <div class="col-md-6">
                   <div class="hero-content-box">
-                     {{-- <span class="hero-sub-title">{{ $hero->name }}</span> --}}
-                     <h1 class="hero-title">{{ $hero->profession }}</h1>
+                     <span class="hero-sub-title">{{ $hero->name ?? '' }}</span>
+                     <h1 class="hero-title">{{ $hero->profession ?? '' }}</h1>
 
                      <div class="hero-image-box d-md-none text-center">
-                        <img src="{{ $hero->photo ? asset($hero->photo) : asset('uploads/no-img-avatar.png')}}" alt="" />
+                        <img src="{{ !empty($hero?->photo) 
+                                    ? asset($hero->photo) 
+                                    : asset('uploads/no-img-avatar.png') }}" alt="" />
                      </div>
 
                      <p class="lead">
-                        {{ $hero->short_description }}
+                        {{ $hero->short_description ?? '' }}
                      </p>
                      <div class="button-box d-flex flex-wrap align-items-center">
                         <a href="{{ $hero->resume }}" class="btn tj-btn-secondary">Download CV <i class="flaticon-download"></i></a>
@@ -44,7 +46,9 @@
                </div>
                <div class="col-md-6 d-none d-md-block">
                   <div class="hero-image-box text-center">
-                     <img src="{{ $hero->photo ? asset($hero->photo) : asset('uploads/no-img-avatar.png')}}" alt="" />
+                     <img src="{{ !empty($hero?->photo) 
+                                 ? asset($hero->photo) 
+                                 : asset('uploads/no-img-avatar.png') }}" alt="" />
                   </div>
                </div>
             </div>
