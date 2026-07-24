@@ -29,16 +29,16 @@
                         <a href="{{ $hero->resume }}" class="btn tj-btn-secondary">Download CV <i class="flaticon-download"></i></a>
                         <ul class="ul-reset social-icons">
                            <li>
-                              <a href="{{ $hero->twitter_url }}"><i class="fa-brands fa-twitter"></i></a>
+                              <a href="{{ $hero->twitter_url ?? '' }}"><i class="fa-brands fa-twitter"></i></a>
                            </li>
                            <li>
-                              <a href="{{ $hero->youtube_url }}"><i class="fa-light fa-basketball"></i></a>
+                              <a href="{{ $hero->youtube_url ?? '' }}"><i class="fa-light fa-basketball"></i></a>
                            </li>
                            <li>
-                              <a href="{{ $hero->linkedin_url }}"><i class="fa-brands fa-linkedin-in"></i></a>
+                              <a href="{{ $hero->linkedin_url ?? ''}}"><i class="fa-brands fa-linkedin-in"></i></a>
                            </li>
                            <li>
-                              <a href="{{ $hero->github_url }}"><i class="fa-brands fa-github"></i></a>
+                              <a href="{{ $hero->github_url ?? ''}}"><i class="fa-brands fa-github"></i></a>
                            </li>
                         </ul>
                      </div>
@@ -56,19 +56,19 @@
                <div class="row">
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="{{ $hero->YOE }}">0</span></div>
+                        <div class="number"><span class="odometer" data-count="{{ $hero->YOE ?? '' }}">0</span></div>
                         <div class="text">Years of <br />Experience</div>
                      </div>
                   </div>
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="{{ $hero->PC }}">0</span>+</div>
+                        <div class="number"><span class="odometer" data-count="{{ $hero->PC ?? '' }}">0</span>+</div>
                         <div class="text">Project <br />Completed</div>
                      </div>
                   </div>
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="{{ $hero->HC }}">0</span>K</div>
+                        <div class="number"><span class="odometer" data-count="{{ $hero->HC ?? '' }}">0</span>K</div>
                         <div class="text">Happy <br />Clients</div>
                      </div>
                   </div>
