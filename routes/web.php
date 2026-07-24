@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/homepage', [FrontendController::class, 'homepage'])->name('homepage');
+Route::get('/', [FrontendController::class, 'homepage'])->name('homepage');
 
 
 Route::middleware('auth')->group(function(){

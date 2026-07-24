@@ -7,7 +7,7 @@
    <meta name="description" content="Hey there! I’m Mustapha, I studied computer science for 4 years at AL-QALAM University Katsina, graduated in 2022 atfer completing Information Technology Developer (ITD) program at Legacy Computer Institute kaduna. I design and develop services for customers of all sizes, specialized in creating stylish, modern websites / web applications, web services and online stores" />
 
    <!-- Site Title -->
-   <title>Mustapha - Personal Portfolio </title>
+   <title>{{ config('app.name')}} </title>
 
    <!-- Place favicon.ico in the root directory -->
    <link rel="apple-touch-icon" href="{{ asset('frontend/assets/img/favicon.png') }}" />
