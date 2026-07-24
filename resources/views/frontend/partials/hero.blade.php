@@ -26,7 +26,7 @@
                         {{ $hero->short_description ?? '' }}
                      </p>
                      <div class="button-box d-flex flex-wrap align-items-center">
-                        <a href="{{ $hero->resume }}" class="btn tj-btn-secondary">Download CV <i class="flaticon-download"></i></a>
+                        <a href="{{ $hero->resume ?? '' }}" class="btn tj-btn-secondary">Download CV <i class="flaticon-download"></i></a>
                         <ul class="ul-reset social-icons">
                            <li>
                               <a href="{{ $hero->twitter_url ?? '' }}"><i class="fa-brands fa-twitter"></i></a>
