@@ -13,7 +13,7 @@
             <div class="row align-items-center">
                <div class="col-md-6">
                   <div class="hero-content-box">
-                     <span class="hero-sub-title">{{ $hero->name }}</span>
+                     {{-- <span class="hero-sub-title">{{ $hero->name }}</span> --}}
                      <h1 class="hero-title">{{ $hero->profession }}</h1>
 
                      <div class="hero-image-box d-md-none text-center">
