@@ -16,7 +16,7 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
 
-RUN npm install 
+RUN npm install
 
 EXPOSE 10000
 
