@@ -6,7 +6,7 @@
  <section class="hero-section d-flex align-items-center" id="intro">
          <div class="intro_text">
             <svg viewBox="0 0 1320 300">
-               <text x="50%" Y="50%" text-anchor="middle">techGuru</text>
+               <text x="50%" Y="50%" text-anchor="middle">Josphat</text>
             </svg>
          </div>
          <div class="container">
