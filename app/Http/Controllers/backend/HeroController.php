@@ -115,11 +115,4 @@ class HeroController extends Controller
             return redirect()->back()->with($notification);
 
      }//End Method
-
-     public function homepage()
-{
-    $hero = Hero::find(1);
-
-    dd($hero);
-}
 }
