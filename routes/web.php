@@ -37,6 +37,7 @@ Route::middleware('auth')->group(function(){
 
     Route::controller(ServicesController::class)->group(function(){
         Route::get('all-services', 'AllServices')->name('all.services');
+        Route::get('add-service', 'AddService')->name('add.service');
         
 
     });

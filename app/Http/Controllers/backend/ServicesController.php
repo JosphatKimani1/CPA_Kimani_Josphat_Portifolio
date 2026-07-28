@@ -14,4 +14,9 @@ class ServicesController extends Controller
     return view('backend.services.all_services', compact('services'));
 
     }// End Method
+
+    public function AddService(){
+        return view('backend.services.add_service');
+
+    }//End Method
 }

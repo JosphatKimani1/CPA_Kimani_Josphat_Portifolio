@@ -39,7 +39,7 @@
             <div class="collapse" id="uiComponents">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="pages/ui-components/accordion.html" class="nav-link">Add Service</a>
+                  <a href="{{ route('add.service')}}" class="nav-link">Add Service</a>
                 </li>
                 <li class="nav-item">
                   <a href="{{ route('all.services')}}" class="nav-link">All Services</a>
