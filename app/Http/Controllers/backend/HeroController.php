@@ -26,7 +26,8 @@ class HeroController extends Controller
             $manager = new ImageManager(new Driver());
             $img = $manager->read($file);
             $img = $img->resize(437,475);
-            $img = $img->tojpeg(80)->save(base_path('public/uploads/hero/'.$imageName));
+            // $img = $img->tojpeg(80)->save(base_path('public/uploads/hero/'.$imageName));
+            $img->toJpeg(80)->save(public_path('uploads/hero/'.$imageName));
             $imagePath = 'uploads/hero/'.$imageName;
 
 
