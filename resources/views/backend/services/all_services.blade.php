@@ -26,8 +26,8 @@
                                 <td>{{ Str::title($service->service_title) }}</td>
                                 <td>{!! Str::wordWrap($service->service_description,  80, '<br>') !!}</td>
                                 <td>
-                                    <a href="{{ route('edit.service', [$service->id])}}" type="button" class="btn btn-inverse-light" style="margin-right: 10px">Edit</a>
-                                    <button type="button" class="btn btn-inverse-danger">Delete</button>
+                                    <a href="{{ route('edit.service', [$service->id])}}" class="btn btn-inverse-light" style="margin-right: 10px">Edit</a>
+                                    <a href="{{ route('delete.service', [$service->id])}}" id="delete" class="btn btn-inverse-danger">Delete</a>
                                 </td>
                                
                             </tr>
