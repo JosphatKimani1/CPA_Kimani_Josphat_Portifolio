@@ -6,12 +6,12 @@
 
 								<h6 class="card-title">Add a Service</h6>
 
-								<form class="forms-sample" method="POST" action="{{ route('add.service') }}">
+								<form class="forms-sample" method="POST" action="{{ route('store.service') }}">
 									@csrf
 									<div class="row mb-3">
-										<label for="exampleInputUsername2" class="col-sm-3 col-form-label">Service Title</label>
+										<label for="exampleInputUsername2" class="col-sm-3 col-form-label">Service Title:</label>
 										<div class="col-sm-9">
-											<input type="text" class="form-control name="service_title" placeholder="Service Title">
+											<input type="text" class="form-control" name="service_title" placeholder="Service Title">
 										</div>
 									</div>
 

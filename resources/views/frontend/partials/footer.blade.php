@@ -18,7 +18,7 @@
                   </nav>
                </div>
                <div class="copy-text">
-                  <p>&copy; 2024 All rights reserved by <a href="#" target="_blank">Mjnamadi</a></p>
+                  <p>&copy; 2026 All rights reserved by <a href="#" target="_blank">CPA Kimani</a></p>
                </div>
             </div>
          </div>

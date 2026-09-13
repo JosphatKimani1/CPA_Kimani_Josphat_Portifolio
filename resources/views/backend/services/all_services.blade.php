@@ -23,11 +23,11 @@
                         @foreach ( $services as $key => $service )
                             <tr>
                                 <td>{{ $key+1 }}</td>
-                                <td>{{ $service->service_title }}</td>
-                                <td>{{ $service->service_description }}</td>
+                                <td>{{ Str::title($service->service_title) }}</td>
+                                <td>{!! Str::wordWrap($service->service_description,  80, '<br>') !!}</td>
                                 <td>
-                                    <button type="button" class="btn btn-light">Edit</button>
-                                    <button type="button" class="btn btn-danger">Delete</button>
+                                    <a href="{{ route('edit.service', [$service->id])}}" type="button" class="btn btn-inverse-light" style="margin-right: 10px">Edit</a>
+                                    <button type="button" class="btn btn-inverse-danger">Delete</button>
                                 </td>
                                
                             </tr>
