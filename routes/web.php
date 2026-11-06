@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\HeroController;
+use App\Http\Controllers\backend\PortfolioController;
 use App\Http\Controllers\backend\ServicesController;
 use App\Http\Controllers\frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
@@ -42,6 +43,15 @@ Route::middleware('auth')->group(function(){
         Route::get('edit-service/{id}', 'EditService')->name('edit.service');
         Route::post('update-service', 'UpdateService')->name('update.service');
         Route::get('delete-service/{id}', 'DeleteService')->name('delete.service');
+        
+
+    });
+
+      // Portfolio/Recent Works All Routes
+
+    Route::controller(PortfolioController::class)->group(function(){
+        Route::get('all-recent-works', 'AllRecentWorks')->name('all.recent.works');
+       
         
 
     });

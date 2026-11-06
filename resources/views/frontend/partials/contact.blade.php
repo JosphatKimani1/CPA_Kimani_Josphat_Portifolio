@@ -5,7 +5,7 @@
                   <div class="contact-form-box wow fadeInLeft" data-wow-delay=".3s">
                      <div class="section-header">
                         <h2 class="section-title">Let’s work together!</h2>
-                        <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
+                        <p>We help bring your ideas to life. We code do the heavy lifting so that you can focus on big picture </p>
                      </div>
 
                      <div class="tj-contact-form">
