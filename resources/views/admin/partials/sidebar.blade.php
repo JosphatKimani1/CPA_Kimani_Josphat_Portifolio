@@ -58,7 +58,7 @@
             <div class="collapse" id="portfolio">
               <ul class="nav sub-menu">
                 <li class="nav-item">
-                  <a href="{{ route('add.service')}}" class="nav-link">Add Work</a>
+                  <a href="{{ route('add.work')}}" class="nav-link">Add Work</a>
                 </li>
                 <li class="nav-item">
                   <a href="{{ route('all.recent.works')}}" class="nav-link">Portfolio</a>

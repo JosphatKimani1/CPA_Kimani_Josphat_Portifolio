@@ -15,11 +15,9 @@
                       <tr>
                         <th>Serial No.</th>
                         <th>Photo</th>
-                        <th>Title</th>
                         <th>Category</th>
                         <th>Title</th>
                         <th>Sub-Title</th>
-                        <th>Descprition</th>
                         <th>Action</th>
                       </tr>
                     </thead>
@@ -28,12 +26,12 @@
                             <tr>
                                 <td>{{ $key+1 }}</td>
                                 <td><img src="{{ $work->photo ? asset($work->photo) : asset('uploads/no_image.jpg')}}" alt=""></td>
-                                <td>{{ Str::title($work->service_cat_id) }}</td>
+                                <td>{{ Str::title($work['service']['service_title']) }}</td>
                                 <td>{{ Str::title($work->title) }}</td>
-                                <td>{{ Str::title($work->sub_title) }}</td>
+                                <td>{!! Str::wordWrap($work->sub_title, 20, '<br>') !!}</td>
                                 <td>
-                                    <a href="{{ route('edit.service', [$work->id])}}" class="btn btn-inverse-light" style="margin-right: 10px">Edit</a>
-                                    <a href="{{ route('delete.service', [$work->id])}}" id="delete" class="btn btn-inverse-danger">Delete</a>
+                                    <a href="{{ route('edit.work', [$work->id])}}" class="btn btn-inverse-light" style="margin-right: 10px">Edit</a>
+                                    <a href="{{ route('delete.work', [$work->id])}}" id="delete" class="btn btn-inverse-danger">Delete</a>
                                 </td>
                                
                             </tr>

@@ -1,3 +1,7 @@
+ @php
+    $service_cats = App\Models\Services::all();
+    $works = App\Models\Portifolio::Latest()->limit(4)->get();
+ @endphp
  <section class="portfolio-section" id="works-section">
          <div class="container">
             <div class="row">
@@ -17,9 +21,9 @@
                   <div class="portfolio-filter text-center wow fadeInUp" data-wow-delay=".5s">
                      <div class="button-group filter-button-group">
                         <button data-filter="*" class="active">All</button>
-                        <button data-filter=".uxui">UX/UI</button>
-                        <button data-filter=".branding">Branding</button>
-                        <button data-filter=".mobile-app">Apps</button>
+                           @foreach ($service_cats as $cat)
+                              <button data-filter=".{{ Str::replace(' ', '-', $cat->service_title) }}">{{ $cat->service_title }}</button>
+                           @endforeach
                         <div class="active-bg"></div>
                      </div>
                   </div>
@@ -27,50 +31,22 @@
                   <div class="portfolio-box wow fadeInUp" data-wow-delay=".6s">
                      <div class="portfolio-sizer"></div>
                      <div class="gutter-sizer"></div>
-                     <div class="portfolio-item branding">
-                        <div class="image-box">
-                           <img src="{{ asset('frontend/assets/img/portfolio/2.jpg') }}" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Deloitte</h3>
-                           <p>Project was about precision and information.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
-                        </div>
+                        @foreach ($works as $work)
+                        <div class="portfolio-item {{ Str::replace(' ', '-',$work['service']['service_title'] )}}">
+                           <div class="image-box">
+                              <img src="{{ asset($work->photo) }}" alt="" />
+                           </div>
+                           <a href="{{ $work->url }}" target="_blank" style="color: #f3f3f3"> 
+                              <div class="content-box">
+                                 <h3 class="portfolio-title">{{ $work->title}}</h3>
+                                 <p>{{ $work->sub_title }}</p>
+                                 <i class="flaticon-up-right-arrow"></i>
+                                 {{-- <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button> --}}
+                              </div>
+                           </a>
                      </div>
-                     <div class="portfolio-item uxui">
-                        <div class="image-box">
-                           <img src="{{ asset('frontend/assets/img/portfolio/1.jpg') }}" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">New Age</h3>
-                           <p>Project was about precision and information.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <div class="portfolio-item mobile-app">
-                        <div class="image-box">
-                           <img src="{{ asset('frontend/assets/img/portfolio/3.jpg') }}" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Sebastian</h3>
-                           <p>Project was about precision and information.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
-                     <div class="portfolio-item branding">
-                        <div class="image-box">
-                           <img src="{{ asset('frontend/assets/img/portfolio/4.jpg') }}" alt="" />
-                        </div>
-                        <div class="content-box">
-                           <h3 class="portfolio-title">Mochnix</h3>
-                           <p>Project was about precision and information.</p>
-                           <i class="flaticon-up-right-arrow"></i>
-                           <button data-mfp-src="#portfolio-wrapper" class="portfolio-link modal-popup"></button>
-                        </div>
-                     </div>
+                        @endforeach
+                    
                   </div>
                </div>
             </div>

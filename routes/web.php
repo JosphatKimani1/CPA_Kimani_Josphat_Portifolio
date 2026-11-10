@@ -51,6 +51,11 @@ Route::middleware('auth')->group(function(){
 
     Route::controller(PortfolioController::class)->group(function(){
         Route::get('all-recent-works', 'AllRecentWorks')->name('all.recent.works');
+        Route::get('add-work', 'AddWork')->name('add.work');
+        Route::post('store-work', 'StoreWork')->name('store.work');
+        Route::get('edit.work/{id}', 'EditWork')->name('edit.work');
+        Route::post('update-work', 'UpdateWork')->name('update.work');
+        Route::get('delete.work/{id}', 'DeleteWork')->name('delete.work');
        
         
 
