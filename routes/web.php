@@ -71,6 +71,10 @@ Route::middleware('auth')->group(function(){
         Route::get('edit-experience/{id}', 'EditExperience');
         Route::post('update-experince', 'UpdateExperince')->name('update.experince');
         Route::get('delete-experience/{id}', 'DeleteExperience')->name('delete.experience');
+
+        // My Education all Routes
+
+        Route::get('my-education', 'MyEducation')->name('my.education');
         
        
        

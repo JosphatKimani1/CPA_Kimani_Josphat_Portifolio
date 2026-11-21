@@ -63,7 +63,7 @@ class ResumeController extends Controller
             ];
         } else {
              $notification = [
-            'message' => 'Education Update Succussfully!',
+            'message' => 'Education Updated Succussfully!',
             'alert-type' => 'info'
             ];
         }
@@ -81,6 +81,12 @@ class ResumeController extends Controller
 
              return redirect()->back()->with($notification);
         
+
+    } // End Method
+
+    public function MyEducation(){
+        $educations = Resume::where('resume_cat', 'education')->get();
+        return view('backend.resume.my_education', compact('educations'));
 
     } // End Method
 }
