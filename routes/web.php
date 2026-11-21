@@ -3,6 +3,7 @@
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\HeroController;
 use App\Http\Controllers\backend\PortfolioController;
+use App\Http\Controllers\backend\ResumeController;
 use App\Http\Controllers\backend\ServicesController;
 use App\Http\Controllers\frontend\FrontendController;
 use App\Http\Controllers\ProfileController;
@@ -56,6 +57,22 @@ Route::middleware('auth')->group(function(){
         Route::get('edit.work/{id}', 'EditWork')->name('edit.work');
         Route::post('update-work', 'UpdateWork')->name('update.work');
         Route::get('delete.work/{id}', 'DeleteWork')->name('delete.work');
+       
+        
+
+    });
+
+
+          // My Experience All Routes
+
+    Route::controller(ResumeController::class)->group(function(){
+        Route::get('my-experience', 'MyExperience')->name('my.experience');
+        Route::post('store-experince', 'StoreExperince')->name('store.experince');
+        Route::get('edit-experience/{id}', 'EditExperience');
+        Route::post('update-experince', 'UpdateExperince')->name('update.experince');
+        Route::get('delete-experience/{id}', 'DeleteExperience')->name('delete.experience');
+        
+       
        
         
 
